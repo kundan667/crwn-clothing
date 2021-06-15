@@ -8,7 +8,6 @@ import './sign-up.styles.scss'
 class SignUp extends Component{
     constructor(){
         super();
-
         this.state = {
             displayName:'',
             email:'',
@@ -42,7 +41,6 @@ class SignUp extends Component{
         const { name, value } = event.target;
         this.setState({ [name]: value });
     }
-
     render(){
         const { displayName, email, password, confirmPassword } = this.state;
         return(
