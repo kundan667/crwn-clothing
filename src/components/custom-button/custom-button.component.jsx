@@ -1,9 +1,9 @@
-import './custom-button.styles.scss'
+import { CustomButtonContainer } from './custom-button.styles'
+//import './custom-button.styles.scss'
 
-const CustomButton = ({ handleClick, children, inverted, ...otherProps }) => (
-    <button className={`${inverted? 'inverted' : ''} custom-button`}
-        onClick={ handleClick }>
+const CustomButton = ({ handleClick, children, ...props }) => (
+    <CustomButtonContainer { ...props } onClick={ handleClick }>
         { children }
-    </button>
+    </CustomButtonContainer>
 ) 
 export default CustomButton
